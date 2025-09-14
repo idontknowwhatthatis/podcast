@@ -7,7 +7,7 @@ const EPISODE = {
   duration: "1:18:54",
   description: "We dropped a friend :D",
   spotifyEmbed:
-    "https://open.spotify.com/embed/episode/4rOoJ6Egrf8K2IrywzwOMk?utm_source=generator", // replace with your own
+    "https://open.spotify.com/embed/episode/6koPyVHIfFDnjApVBm0kOk?utm_source=generator", // replace with your own
 };
 
 export default function Home() {
