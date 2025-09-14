@@ -2,78 +2,37 @@ import EPISODES from "../data/episodes";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900 font-poppins">
-      {/* Navbar */}
-      <nav className="w-full border-b border-gray-200">
-        <div className="max-w-5xl mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-xl font-bold text-[#47c1ff]">🍋 Lemon Lime</h1>
-          <div className="space-x-6 text-sm font-medium">
-            <a href="#episodes" className="hover:text-[#47c1ff]">Episodes</a>
-            <a href="#about" className="hover:text-[#47c1ff]">About</a>
-            <a href="#contact" className="hover:text-[#47c1ff]">Contact</a>
-            <button className="bg-[#47c1ff] text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-poppins flex flex-col">
       {/* Hero */}
-      <header className="text-center py-16 px-6">
-        <h2 className="text-5xl font-extrabold mb-4">Lemon Lime</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Unhinged & random conversations — Alex & McKenzie
-        </p>
-        <p className="mt-4 text-xl font-semibold">
+      <header className="bg-[#47c1ff] text-white py-20 px-6 text-center">
+        <h1 className="text-5xl font-extrabold mb-4">🍋 Lemon Lime</h1>
+        <p className="text-xl max-w-2xl mx-auto mb-6">
+          Unhinged & random conversations with Alex & McKenzie.  
           Quick, loud, unpredictable.
         </p>
-        <button className="mt-8 bg-[#47c1ff] text-white px-6 py-3 rounded-lg font-bold hover:opacity-90">
-          🎧 Listen Now
-        </button>
-        <p className="mt-4 text-sm">
-          Call for Guests:{" "}
-          <span className="font-bold">606-336-1088</span>
+        <div className="space-x-4">
+          <button className="bg-white text-[#47c1ff] font-bold px-6 py-3 rounded-xl shadow hover:opacity-90">
+            🎧 Listen Now
+          </button>
+          <a
+            href="#episodes"
+            className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#47c1ff] transition"
+          >
+            Browse Episodes
+          </a>
+        </div>
+        <p className="mt-6 text-sm">
+          Call for Guests: <span className="font-bold">606-336-1088</span>
         </p>
       </header>
 
       {/* Episodes */}
-      <main id="episodes" className="max-w-4xl mx-auto px-6 pb-16">
-        <h3 className="text-2xl font-bold text-[#47c1ff] mb-6">
+      <main id="episodes" className="flex-1 max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold mb-10 text-center text-[#47c1ff]">
           Latest Episode
-        </h3>
+        </h2>
+
         {EPISODES.map((ep) => (
           <div
             key={ep.id}
-            className="bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-100"
-          >
-            <h4 className="text-xl font-semibold">{ep.title}</h4>
-            <p className="text-sm text-gray-500 mb-2">
-              {ep.date} • {ep.duration}
-            </p>
-            <p className="text-gray-700 mb-4">{ep.description}</p>
-
-            {ep.spotifyEmbed ? (
-              <div
-                className="rounded-lg overflow-hidden"
-                dangerouslySetInnerHTML={{ __html: ep.spotifyEmbed }}
-              />
-            ) : (
-              <audio controls className="w-full mt-2">
-                <source src={ep.sampleAudio} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            )}
-          </div>
-        ))}
-      </main>
-
-      {/* Footer */}
-      <footer
-        id="contact"
-        className="bg-gray-100 border-t border-gray-200 py-6 text-center text-sm"
-      >
-        <p>© {new Date().getFullYear()} Lemon Lime Podcast</p>
-      </footer>
-    </div>
-  );
-}
+            className="bg-white shadow-lg rounded-2xl p-8 mb-10 border border-gray-100"
