@@ -1,4 +1,4 @@
-// Small episodes DB (edit/add). sampleAudio should be public URLs (S3, Vercel Storage, or CDN)
+// Lemon Lime - episodes (single entry)
 const EPISODES = [
   {
     id: '1',
@@ -6,5 +6,8 @@ const EPISODES = [
     description: 'We dropped a friend :D',
     date: '2025-09-14',
     duration: '1:18:54',
-    sampleAudio: '' // <-- paste a public mp3 URL
+    sampleAudio: '' // <-- add a public MP3 URL here (S3, Vercel Storage, CDN)
   }
+];
+
+export default EPISODES;
