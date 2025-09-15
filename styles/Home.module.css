@@ -70,3 +70,33 @@
   margin-bottom: 1rem;
   border-radius: 20px; /* <-- rounds corners */
 }
+/* Switch container */
+.themeToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 28px;
+  background: var(--box-bg);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Circle inside */
+.toggleCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+/* Moves the circle to the right in dark mode */
+.toggleDark {
+  transform: translateX(22px);
+}
