@@ -17,17 +17,8 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-            <main className={styles.main}>
-        {/* Toggle switch */}
-        <button
-          className={styles.toggle}
-          onClick={() => setDarkMode(!darkMode)}
-          aria-label="Toggle dark mode"
-        >
-          {darkMode ? "☀️" : "🌙"}
-        </button>
-          
-        <header className={styles.header}>
+       <main className={styles.main}>
+          <header className={styles.header}>
           <img
             src="/logo.png"
             alt="Lemon Lime Podcast Logo"
