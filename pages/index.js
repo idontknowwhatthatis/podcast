@@ -55,7 +55,7 @@ export default function Home() {
         <section className={styles.section}>
           <h2>Be a Guest</h2>
           <p>
-            Want to join us on the show?.
+            Want to join us on the show?
           </p>
           <p className={styles.contact}>
             📞 Call or text us at:{" "}
