@@ -1,7 +1,25 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [theme, setTheme] = useState("light");
+
+  // Load saved theme on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
+
+  // Toggle theme and save
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <>
       <Head>
@@ -17,24 +35,28 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-       <main className={styles.main}>
-          <header className={styles.header}>
+
+      <main className={styles.main}>
+        <header className={styles.header}>
           <img
             src="/logo.png"
             alt="Lemon Lime Podcast Logo"
             className={styles.logo}
           />
           <h1 className={styles.title}>Lemon Lime Podcast</h1>
-          <p className={styles.tagline}>
-            Randomness, 24/7.
-          </p>
+          <p className={styles.tagline}>Randomness, 24/7.</p>
+
+          {/* 🌙☀️ Theme Toggle */}
+          <button className={styles.themeToggle} onClick={toggleTheme}>
+            {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+          </button>
         </header>
 
         <section className={styles.section}>
           <h2>About</h2>
           <p>
-            Welcome to the <strong>Lemon Lime Podcast</strong>, where we do random stuff
-            and hope that you like it.
+            Welcome to the <strong>Lemon Lime Podcast</strong>, where we do
+            random stuff and hope that you like it.
           </p>
         </section>
 
@@ -42,21 +64,19 @@ export default function Home() {
           <h2>Latest Episode: 1</h2>
           <div className={styles.player}>
             <iframe
+              title="Lemon Lime Podcast Episode 1"
               src="https://open.spotify.com/embed/episode/6koPyVHIfFDnjApVBm0kOk?utm_source=generator"
               width="100%"
               height="152"
               frameBorder="0"
               allow="encrypted-media"
-              allowFullScreen
             ></iframe>
           </div>
         </section>
 
         <section className={styles.section}>
           <h2>Be a Guest</h2>
-          <p>
-            Want to join us on the show?
-          </p>
+          <p>Want to join us on the show?</p>
           <p className={styles.contact}>
             📞 Call or text us at:{" "}
             <a href="tel:6063361088" className={styles.phone}>
