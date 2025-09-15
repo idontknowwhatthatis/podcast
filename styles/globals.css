@@ -5,6 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
   color: #222;
+  transition: background 0.3s, color 0.3s;
 }
 
 a {
@@ -14,4 +15,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
 }
