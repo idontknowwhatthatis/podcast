@@ -46,10 +46,14 @@ export default function Home() {
           <h1 className={styles.title}>Lemon Lime Podcast</h1>
           <p className={styles.tagline}>Randomness, 24/7.</p>
 
-          {/* 🌙☀️ Theme Toggle */}
-          <button className={styles.themeToggle} onClick={toggleTheme}>
-            {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-          </button>
+          {/* 🌙☀️ Toggle Switch */}
+          <div className={styles.themeToggle} onClick={toggleTheme}>
+            <div
+              className={`${styles.toggleCircle} ${
+                theme === "dark" ? styles.toggleDark : ""
+              }`}
+            ></div>
+          </div>
         </header>
 
         <section className={styles.section}>
