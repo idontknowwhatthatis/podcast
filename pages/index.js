@@ -68,7 +68,7 @@ export default function Home() {
         <footer className={styles.footer}>
           <p>
             &copy; {new Date().getFullYear()} Lemon Lime Podcast. All rights
-            reserved.
+            reserved. Troll callers/messagers will be blocked.
           </p>
         </footer>
       </main>
