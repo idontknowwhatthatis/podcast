@@ -1,54 +1,61 @@
-// pages/index.js
 import Head from "next/head";
-
-const EPISODE = {
-  id: 1,
-  title: "What do we call it?",
-  duration: "1:18:54",
-  description: "We dropped a friend :D",
-  spotifyEmbed:
-    "https://open.spotify.com/embed/episode/4rOoJ6Egrf8K2IrywzwOMk?utm_source=generator", // replace with your actual episode link
-};
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Lemon Lime Podcast</title>
-        <meta name="description" content="The Lemon Lime Podcast" />
+        <meta name="description" content="The official Lemon Lime Podcast website" />
+        <link rel="icon" href="/logo.png" />
       </Head>
+      <main className={styles.main}>
+        <header className={styles.header}>
+          <img src="/logo.png" alt="Lemon Lime Podcast Logo" className={styles.logo} />
+          <h1 className={styles.title}>Lemon Lime Podcast</h1>
+          <p className={styles.tagline}>
+            Fresh takes. Bold conversations. Always refreshing.
+          </p>
+        </header>
 
-      <main className="min-h-screen bg-gradient-to-br from-lime-200 via-yellow-100 to-green-200 p-10 flex flex-col items-center">
-        {/* Header */}
-        <h1 className="text-6xl font-extrabold text-gray-800 mb-6 drop-shadow-lg text-center">
-          🍋 Lemon Lime Podcast
-        </h1>
-        <p className="text-lg text-gray-700 mb-12 text-center max-w-xl">
-          Fresh takes, tangy laughs, and just the right amount of chaos.
-        </p>
+        <section className={styles.section}>
+          <h2>About</h2>
+          <p>
+            Welcome to the <strong>Lemon Lime Podcast</strong>, where we dive into engaging
+            stories, unique perspectives, and conversations that matter. Every episode is
+            crisp, sharp, and full of flavor—just like a fresh lemon-lime.
+          </p>
+        </section>
 
-        {/* Episode Card */}
-        <div className="max-w-3xl w-full bg-white shadow-2xl rounded-3xl p-10 border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-green-400/30">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">
-            {EPISODE.title}
-          </h2>
-          <p className="text-sm text-gray-500 mb-4">⏱ {EPISODE.duration}</p>
-          <p className="text-gray-700 mb-6">{EPISODE.description}</p>
+        <section className={styles.section}>
+          <h2>Listen Now</h2>
+          <div className={styles.player}>
+            <iframe
+              src="https://open.spotify.com/embed/show/yourpodcastid"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allow="encrypted-media"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
 
-          <iframe
-            src={EPISODE.spotifyEmbed}
-            width="100%"
-            height="152"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            className="rounded-xl shadow-md"
-          ></iframe>
-        </div>
+        <section className={styles.section}>
+          <h2>Be a Guest</h2>
+          <p>
+            Want to join us on the show? We’re always looking for fresh voices and ideas.
+          </p>
+          <p className={styles.contact}>
+            📞 Call or text us at:{" "}
+            <a href="tel:6063361088" className={styles.phone}>
+              (606) 336-1088
+            </a>
+          </p>
+        </section>
 
-        {/* Footer */}
-        <footer className="mt-16 text-gray-600 text-sm">
-          © {new Date().getFullYear()} Lemon Lime Podcast · All Rights Reserved
+        <footer className={styles.footer}>
+          <p>&copy; {new Date().getFullYear()} Lemon Lime Podcast. All rights reserved.</p>
         </footer>
       </main>
     </>
