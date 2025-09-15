@@ -16,9 +16,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/* Dark mode */
-body.dark {
-  background-color: #121212;
-  color: #f5f5f5;
-}
