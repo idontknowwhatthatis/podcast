@@ -64,19 +64,21 @@ export default function Home() {
           </p>
         </section>
 
-                <section className={styles.section}>
-          <h2>Latest Episode: 1</h2>
-          <div className={styles.player}>
-            <iframe
-              title="Lemon Lime Podcast Episode 1"
-              src="https://open.spotify.com/embed/episode/6koPyVHIfFDnjApVBm0kOk?utm_source=generator"
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allow="encrypted-media"
-            ></iframe>
-          </div>
-        </section>
+<section className={`${styles.section} ${styles.sectionWide}`}>
+  <h2>Latest Episode: 1</h2>
+  <div className={styles.player}>
+    <iframe
+      title="Lemon Lime Podcast Episode 1"
+      src="https://open.spotify.com/embed/episode/6koPyVHIfFDnjApVBm0kOk?utm_source=generator"
+      width="100%"
+      height="232"
+      frameBorder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
+
 
         <section className={styles.section}>
           <h2>Be a Guest</h2>
