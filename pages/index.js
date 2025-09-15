@@ -73,8 +73,7 @@ export default function Home() {
               width="100%"
               height="152"
               frameBorder="0"
-              allow="encrypted-media"
-
+              allow="encrypted-media" >
           </div>
         </section>
 
