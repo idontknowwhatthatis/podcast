@@ -29,13 +29,11 @@
 }
 
 .section {
-  max-width: 800px;
-  width: 100%;
-  margin: 2rem 0;
-  padding: 2rem;
-  background: white;
+  background: var(--box-bg);
+  padding: 1.5rem;
+  margin: 1rem auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .section h2 {
@@ -58,9 +56,12 @@
 }
 
 .footer {
-  margin-top: 3rem;
+  background: var(--box-bg);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 12px;
   text-align: center;
-  color: #666;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .logo {
