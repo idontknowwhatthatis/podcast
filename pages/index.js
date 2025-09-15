@@ -64,7 +64,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.section}>
+                <section className={styles.section}>
           <h2>Latest Episode: 1</h2>
           <div className={styles.player}>
             <iframe
@@ -73,7 +73,8 @@ export default function Home() {
               width="100%"
               height="152"
               frameBorder="0"
-              allow="encrypted-media" >
+              allow="encrypted-media"
+            ></iframe>
           </div>
         </section>
 
