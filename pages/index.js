@@ -6,12 +6,24 @@ export default function Home() {
     <>
       <Head>
         <title>Lemon Lime Podcast</title>
-        <meta name="description" content="The official Lemon Lime Podcast website" />
+        <meta
+          name="description"
+          content="The official Lemon Lime Podcast website"
+        />
         <link rel="icon" href="/logo.png" />
+        {/* Google Fonts: Poppins */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <main className={styles.main}>
         <header className={styles.header}>
-          <img src="/logo.png" alt="Lemon Lime Podcast Logo" className={styles.logo} />
+          <img
+            src="/logo.png"
+            alt="Lemon Lime Podcast Logo"
+            className={styles.logo}
+          />
           <h1 className={styles.title}>Lemon Lime Podcast</h1>
           <p className={styles.tagline}>
             Fresh takes. Bold conversations. Always refreshing.
@@ -21,9 +33,10 @@ export default function Home() {
         <section className={styles.section}>
           <h2>About</h2>
           <p>
-            Welcome to the <strong>Lemon Lime Podcast</strong>, where we dive into engaging
-            stories, unique perspectives, and conversations that matter. Every episode is
-            crisp, sharp, and full of flavor—just like a fresh lemon-lime.
+            Welcome to the <strong>Lemon Lime Podcast</strong>, where we dive
+            into engaging stories, unique perspectives, and conversations that
+            matter. Every episode is crisp, sharp, and full of flavor—just like
+            a fresh lemon-lime.
           </p>
         </section>
 
@@ -44,7 +57,8 @@ export default function Home() {
         <section className={styles.section}>
           <h2>Be a Guest</h2>
           <p>
-            Want to join us on the show? We’re always looking for fresh voices and ideas.
+            Want to join us on the show? We’re always looking for fresh voices
+            and ideas.
           </p>
           <p className={styles.contact}>
             📞 Call or text us at:{" "}
@@ -55,7 +69,10 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          <p>&copy; {new Date().getFullYear()} Lemon Lime Podcast. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Lemon Lime Podcast. All rights
+            reserved.
+          </p>
         </footer>
       </main>
     </>
