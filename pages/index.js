@@ -64,6 +64,14 @@ export default function Home() {
           </p>
         </section>
 
+              <section className={styles.section}>
+          <h2>Next episode concept</h2>
+          <p>
+            We're going to be going through reddit confessions and rating them from 1-10 messed-up-ness!
+          </p>
+        </section>
+
+              
 <section className={`${styles.section} ${styles.sectionWide}`}>
   <h2>Latest Episode: 1</h2>
   <div className={styles.player}>
@@ -80,6 +88,14 @@ export default function Home() {
 </section>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe44eA0-S6ZGwfKQiakj-hx_G-h7E46GzqfVMxllECWAdzhpQ/viewform?embedded=true" width="320" height="303" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        
+        <section className={styles.section}>
+          <h2>Rules</h2>
+          <p>
+            <strong> Absolutely no racism, or discrimination.</strong>
+          </p>
+        </section>
+
         <section className={styles.section}>
           <h2>Be a Guest</h2>
           <p>Want to join us on the show?</p>
