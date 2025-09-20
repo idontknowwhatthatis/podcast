@@ -67,7 +67,7 @@ export default function Home() {
               <section className={styles.section}>
           <h2>Next episode concept</h2>
           <p>
-            We're going to be going through reddit confessions and rating them from 1-10 messed-up-ness!
+            Talking episode (Saturdays)
           </p>
         </section>
 
@@ -77,7 +77,7 @@ export default function Home() {
   <div className={styles.player}>
     <iframe
       title="Lemon Lime Podcast Episode 1"
-      src="https://open.spotify.com/embed/episode/6koPyVHIfFDnjApVBm0kOk?utm_source=generator"
+      src="https://open.spotify.com/embed/episode/4N3JLpCSUNeJainOGNqgYK?utm_source=generator"
       width="100%"
       height="232"
       frameBorder="0"
@@ -108,7 +108,7 @@ export default function Home() {
         </section>
         <footer className={styles.footer}>
           <p>
-            &copy; {new Date().getFullYear()} Lemon Lime Podcast. All rights
+            &copy; {new Date().getFullYear()} Lemon Lime Podcast. No rights
             reserved. Troll callers/messagers will be blocked.
           </p>
         </footer>
